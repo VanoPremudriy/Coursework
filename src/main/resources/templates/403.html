@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th = "http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>Чат</title>
+    <link rel="shortcut icon" href="/static/Favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./static/styles/Chat.css" />
+    <link rel="stylesheet" href="../static/styles/Playlist.css" />
+    <link rel="stylesheet" href="../static/styles/Header.css" />
+</head>
+<body>
+<div class="HeadBackground">
+    <img src="../static/background.jpg" class="Back" />
+    <ul class="TopMenu">
+        <li><a href="/index"><button class="MainPage">На главную страницу</button></a></li>
+        <li sec:authorize="isAuthenticated()"><a href="/UsersPage"><button class="UsersPage">Пользователи</button></a></li>
+        <li>
+            <a href="/GenrePage"><button class="Genre">Жанр &#9660;</button></a>
+            <ul class="SubMenu">
+                <li class="myli1">
+                    <ul>
+                        <li><span>А</span></li>
+                        <li><a href="/GenrePages?id=1"><button class="AlternativeRock" >Альтернативный рок</button></a></li>
+                        <li><span>Г</span></li>
+                        <li><a href="/GenrePages?id=8"><button class="GothicMetal">Готик метал</button></a></li>
+                        <li><a href="/GenrePages?id=9"><button class="GothicRock">Готик рок</button></a></li>
+                        <li><span>Д</span></li>
+                        <li><a href="/GenrePages?id=3"><button class="DeathMetal">Дэт-Метал</button></a></li>
+                        <li><span>И</span></li>
+                        <li><a href="/GenrePages?id=12"><button class="Industrial">Индастриал</button></a></li>
+                        <li><span>М</span></li>
+                        <li><a href="/GenrePages?id=15"><button class="MelodicDeathMetal">Мелодик Дэт-Метал</button></a></li>
+                        <li><a href="/GenrePages?id=16"><button class="Step-Metal">Метал-Степ</button></a></li>
+                    </ul>
+                </li>
+                <li class="myli2">
+                    <ul>
+                        <li><span>Н</span></li>
+                        <li><a href="/GenrePages?id=17"><button class="NuMetal">Ню-Метал</button></a></li>
+                        <li><span>П</span></li>
+                        <li><a href="/GenrePages?id=19"><button class="PowerMetal">Пауэр-Метал</button></a></li>
+                        <li><a href="/GenrePages?id=20"><button class="PunkRock">Панк-Рок</button></a></li>
+                        <li><a href="/GenrePages?id=18"><button class="PopPunk">Поп-панк</button></a></li>
+                        <li><span>С</span></li>
+                        <li><a href="/GenrePages?id=22"><button class="SymphonicMetal">Симфонический метал</button></a></li>
+                        <li><a href="/GenrePages?id=24"><button class="Synthwave">Синтвейв (Ретровейв)</button></a></li>
+                        <li><a href="/GenrePages?id=23"><button class="SynthRock">Синти-Рок</button></a></li>
+                        <li><a href="/GenrePages?id=21"><button class="SpeedMetal">Спид-Метал</button></a></li>
+                        <li><button> </button></li>
+                        <li><button> </button></li>
+                        <li><button> </button></li>
+                        <li><button> </button></li>
+                    </ul>
+                </li>
+                <li class="myli3">
+                    <ul>
+                        <li><span>Ф</span></li>
+                        <li><a href="/GenrePages?id=7"><button class="FolkRock">Фолк-Рок</button></a></li>
+                        <li><a href="/GenrePages?id=6"><button class="FolkMetal">Фолк-Метал</button></a></li>
+                        <li><span>Х</span></li>
+                        <li><a href="/GenrePages?id=10"><button class="HardRock">Хард-Рок</button></a></li>
+                        <li><a href="/GenrePages?id=11"><button class="HeavyMetal">Хеви-Метал</button></a></li>
+                        <li><a href="/GenrePages?id=2"><button class="ChristianRock">Христианский Рок</button></a></li>
+                        <li><span>Э</span></li>
+                        <li><a href="/GenrePages?id=4"><button class="Electronic">Электроника</button></a></li>
+                        <li><a href="/GenrePages?id=5"><button class="ElectronicRock">Электроник-Рок</button></a></li>
+                        <li><span>Я</span></li>
+                        <li><a href="/GenrePages?id=14"><button class="JRock">Японский Рок</button></a></li>
+                        <li><a href="/GenrePages?id=13"><button class="JPop">Японский Поп</button></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li sec:authorize="isAuthenticated()"><a href="/Profile"><button class="Authorization" sec:authentication="name"></button></a></li>
+        <li sec:authorize="isAuthenticated()"><a href="/logout"><button class="Registration">Выход</button></a></li>
+        <li sec:authorize="isAnonymous()"><a href="/AuthorizationPage"><button class="Authorization">Авторизация</button></a></li>
+        <li sec:authorize="isAnonymous()"><a href="/RegistrationPage"><button class="Registration">Регистрация</button></a></li>
+    </ul>
+</div>
+<div class="box" style="width:90%; height:3000px;">
+
+    <div class="TextProfile">
+        <span>Ошибка</span>
+    </div>
+
+    <div class="box2">
+        <div class="starter-template">
+            <h1>403 - Access is denied</h1>
+            <div th:inline="text">Hello '[[${#httpServletRequest.remoteUser}]]',
+                you do not have permission to access this page.</div>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------------------------------->
+
+    <div class="Playlist">
+        <div class="plHader">
+            <img src="../static/Player/Play.png" onclick='chg()' id="Play" />
+            <div id="Line"></div>
+            <input type="range" min="1" max="" value="0" class="slider" id="myRange" onchange="0" oninput="0">
+            <input type="range" min="0" max="100" value="0" class="slider" id="myRangeTwo" onchange="0" oninput="0">
+            <div id="Slider">
+                <audio id="Audio">
+                    <source src="" type='audio/ogg; codecs="opus"'>
+                </audio>
+            </div>
+        </div>
+        <div class="plMusic">
+            <div sec:authorize="isAnonymous()" style="width: 100%"><span style="font-size: 20px">Возможность добавлять песни в плейлист возможна только зарегистрированным пользователям</span></div>
+            <div sec:authorize="isAuthenticated()" th:each="track: ${user.getPlayerSongs()}" class="pl-track" >
+                <div class="TenImage">
+                    <img src="../static/Player/Play.png" class="Track" />
+                </div>
+                <div class="Name">
+                    <span th:text="${track.getBand().getBandName() + ' - ' + track.getSongName()}"></span>
+                </div>
+                <audio class="Audio" ontimeupdate="slider.value = audio.currentTime;">
+                    <source th:src="${track.getUrl() + '/'+ track.getSongName().replaceAll(' ', '_') + '.mp3'}" type='audio/ogg; codecs="opus"'>
+                </audio>
+                <a th:href="@{/delete_song_from_player(id=${track.getId()}, url='Profile')}">
+                    <div class="pl-delete">
+                        <img src="../static/Player/Delete.png"  />
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="../static/scripts/Playlist.js"></script>
+</body>
+</html>
