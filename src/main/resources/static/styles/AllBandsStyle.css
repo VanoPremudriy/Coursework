@@ -1,0 +1,418 @@
+body {
+    background: url("../back2.jpg");
+}
+
+#Header {
+    display: flex;
+    margin-left: 25%;
+}
+
+.in-love{
+    height: 35px;
+    font-size: 20px;
+    border: none;
+    background: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+    transition: .4s;
+    margin-left: 450px;
+    margin-top:-50px;
+}
+
+.in-love:hover {
+    transition: .4s;
+    color: #000000;
+    background: #b422cb;
+}
+
+.in-love:active {
+    color: #000000;
+    background: #df75ef;
+    transition: .0s;
+}
+
+.in-love:focus {
+    outline: none;
+}
+
+.box2 {
+    margin-left: 22%;
+    margin-top: 5%;
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.BandInfo {
+    width: 600px;
+    text-align: justify;
+}
+
+p {
+    font-size: 40px;
+}
+
+.BandInfo span {
+    font-size: 20px;
+}
+
+.BandGenres span {
+    position: absolute;
+    margin-left: 1%;
+    padding-top: 5px;
+    color: #000000;
+    text-align: center;
+    font-size: 30px;
+}
+
+.BandGenres a>button {
+    border: none;
+    padding: 5px;
+    background: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: .3s linear;
+}
+
+    .BandGenres a>button:hover {
+        transition: .4s;
+        color: #000000;
+        background: #b422cb;
+    }
+
+    .BandGenres a>button:active {
+        color: #000000;
+        background: #df75ef;
+        transition: .0s;
+    }
+
+    .BandGenres a>button:focus {
+        outline: none;
+    }
+
+.BandGenres {
+    margin-left: 10%;
+    width: 40%;
+}
+
+.ImageLeft {
+    width: 320px;
+}
+
+    .ImageLeft img {
+        padding-bottom: 25%;
+        width: 100%;
+        height: auto;
+    }
+
+.ImageRight {
+    width: 320px;
+}
+
+    .ImageRight img {
+        padding-left: 5px;
+        padding-bottom: 25%;
+        width: 100%;
+        height: auto;
+    }
+
+img.EndImage {
+    padding-bottom: 0;
+}
+
+.TopTen {
+    border: solid;
+    border-width: 1px;
+    width: 1050px;
+    margin-left: 25%;
+    height: 350px;
+    background-color: #ffffff;
+}
+
+    .TopTen #TOP {
+        font-size: 30px;
+        width: 1050px;
+        text-align: center;
+        background-color: #b422cb;
+    }
+
+    .TopTen > *:not(:first-child) > * {
+        border: solid;
+        width: 500px;
+        border-width: 1px;
+        margin-bottom: 5px;
+    }
+
+    .TopTen > *:not(:first-child) span {
+        position: absolute;
+        font-size: 25px;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    .TopTen > *:not(:first-child) > *:hover {
+        transition: .3s;
+        background-color: #df75ef;
+    }
+
+    .TopTen > * .TenImage {
+        margin-left: 1%;
+        border-style: solid;
+        display: inline-block;
+        border-radius: 100%;
+        border-color: #808080;
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff;
+    }
+
+        .TopTen > * .TenImage:active {
+            margin-left: 10px;
+            margin-top: 5px;
+            transition: 0.1s;
+            height: 40px;
+            width: 40px;
+            margin-bottom: 5px;
+        }
+
+    .TopTen .TenImage:active > img {
+        margin: 10px;
+        width: 20px;
+        height: auto;
+        transition: 0.1s;
+    }
+
+.TenImage img {
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.RightTracks {
+    margin-left: 549px;
+}
+
+.TopTen > *:not(:first-child) > * .TenImage:active + span {
+    margin-left: 15px;
+    transition: 0.1s;
+}
+
+.track-add-playlist {
+    margin-left: 310px;
+    border-style: solid;
+    display: inline-block;
+    border-radius: 100%;
+    border-color: #808080;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.track-add-playlist:active {
+    margin-left: 315px;
+    margin-top: 5px;
+    transition: 0.1s;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 5px;
+}
+
+.track-add-playlist:active > img {
+    margin: 10px;
+    width: 20px;
+    height: auto;
+    transition: 0.1s;
+}
+
+.track-add-playlist img {
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.track-add-love {
+    margin-left: 380px;
+    border-style: solid;
+    display: inline-block;
+    border-radius: 100%;
+    border-color: #808080;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.track-add-love:active {
+    margin-left: 385px;
+    margin-top: 5px;
+    transition: 0.1s;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 5px;
+}
+
+.track-add-love:active > img {
+    margin: 10px;
+    width: 20px;
+    height: auto;
+    transition: 0.1s;
+}
+
+.track-add-love img {
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+
+.Videos {
+    font-size: 30px;
+    margin-top: 100px;
+    margin-left: 25%;
+}
+
+    .Videos video {
+        background: #000000;
+        height: 400px;
+        width: 500px;
+    }
+
+
+#videoTwo {
+    margin-left: 50px;
+}
+
+#videoThree {
+    margin-top: 50px;
+}
+
+#videoFour {
+    margin-left: 50px;
+    margin-top: 50px
+}
+
+@media(min-width:1081px) {
+    #videoTwo {
+        margin-left: 0px;
+    }
+
+    #videoThree {
+        margin-left: 0px;
+        margin-top: 0px
+    }
+
+    #videoFour {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+}
+
+@media(max-width:1405px) {
+    .TopTen {
+        margin-left: 30%;
+        width: 500px;
+        height: 700px;
+        margin-top: 3%;
+    }
+
+        .TopTen #TOP {
+            width: 501px;
+        }
+
+    .RightTracks {
+        margin-left: -1px;
+        margin-top: 330px;
+    }
+}
+
+@media(max-width:1440px) {
+    #videoTwo {
+        margin-left: 0px;
+    }
+
+    #videoThree {
+        margin-left: 0px;
+        margin-top: 0px
+    }
+
+    #videoFour {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+}
+
+
+@media(max-width:768px) {
+
+    .BandInfo span {
+        font-size: 15px;
+    }
+
+    .BandGenres span {
+        font-size: 15px;
+    }
+
+    .BandGenres button {
+        font-size: 10px;
+    }
+
+    .TopTen {
+        margin-left: 0;
+        position: relative;
+        align-content: center;
+        margin: 0 auto;
+    }
+
+    .Videos {
+        margin-left: 0;
+        margin-bottom:180px;
+    }
+
+    #Header {
+        margin-left: 0;
+    }
+
+    .box2 {
+        margin-left: -1em;
+    }
+
+}
+
+@media(max-width:500px) {
+
+    .Videos video {
+        width: 310px;
+        height: 200px;
+    }
+
+    .TopTen {
+        width: 310px;
+        position: relative;
+        align-content: center;
+        margin: 0 auto;
+    }
+
+        .TopTen #TOP {
+            width: 310px;
+            font-size: 20px;
+        }
+
+        .TopTen > *:not(:first-child) > * {
+            border: solid;
+            width: 310px;
+            border-width: 1px;
+            margin-bottom: 5px;
+        }
+
+        .TopTen > *:not(:first-child) span {
+            font-size: 15px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+}
